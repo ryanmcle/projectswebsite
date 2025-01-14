@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure full height */
+    font-family: "CenturyExpanded", ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 80vh; /* Set the height of the header to 100% of the viewport height */
+    position: relative;
+    overflow: hidden; /* Center the image vertically */
+}
+
+/* The image will scale properly and fill the viewport */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%; /* Ensures the whole image fits inside the container without being cropped */
+} 
+
+.white-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231, 0, 0);
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "CenturyExpanded", ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;
+    font-weight: normal;
+}
+
+/* Header text*/
+.header-text {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    color: white;
+    font-size: 2rem;
+    font-family: "CenturyExpanded", ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;
+    z-index: 10;
+}
+
+/* About Me Section */
+.about-me {
+    padding: 50px 20px;
+    margin-top: 0;
+    background-color: hsl(0, 8%, 95%);
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh;  
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+}
+
+.about-me-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color:black;
+}
+/* About Me Box */
+.about-me-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 900px;
+    text-align: left;
+    font-family: "CenturyExpanded", ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;
+    max-height: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Skills Section */
+.about-me-content h3 {
+    margin-top: 20px;
+    font-size: 2.2rem;  /* Same size as About me header */
+    font-weight: normal; /* Remove bold from Skills */
+    text-align: center;
+    font-weight: bold;
+    color:black;  /* Center the Skills header */
+}
+
+
+/* Additional Adjustments for Centered Text */
+.about-me-box p {
+    text-align: center;
+    color: #555;
+    font-size: 1.4rem;  /* Ensures all text is centered in the About Me Box */
+}
+
+/* Skills Section Content (Ensure centered and spaced properly) */
+.about-me-content p {
+    margin-top: 20px;
+    font-size: 1.4rem;/* Center the text for Skills */
+    text-align: center;   /* Adjust font size for better spacing */
+}
+
+/* Project Section Title */
+.projects-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px; /* Adjust margin to space it out from the widgets */
+    font-family: "CenturyExpanded", ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;
+    color: #000000;
+    text-align: center; /* Ensures the title is centered */
+    width: 100%; /* Make sure the title takes the full width */
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Keep the widgets centered in rows */
+    gap: 20px; /* Adjust the gap between widgets */
+}
+
+/* Project Widgets */
+.project-widget {
+    width: 300px;  /* Fixed width of the widget (300px) */
+    height: 350px; /* Fixed height of the widget (350px) */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; /* Stretch children to take full width */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;  /* Adds smooth transition for scaling */
+    text-align: center;
+}
+
+/* Hover effect for widgets */
+.project-widget:hover {
+    transform: scale(1.05); /* Slightly increases the size of the widget */
+    z-index: 10; /* Ensures the widget stays above others */
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;  /* Ensures the image takes full width (300px) */
+    height: 175px; /* Image height (50% of the widget height) */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Prevents any unwanted space below the image */
+}
+
+/* Project Info (Text) */
+.project-info {
+    padding: 10px 15px; /* Padding for text */
+    height: calc(100% - 175px); /* The remaining height (350px - 175px = 175px) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Link styling */
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.end-section {
+    padding: 50px 20px;
+    margin-top: 0;
+    background-color: #003366;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    height: 25vh;  
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+}
+
+.footer-links * {
+    color: white;
+}
